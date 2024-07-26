@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6e4e4;
+    /* height: 10000px; */
+}
+
+:root{
+    --bg-color-light:  ;
+    --bg-color-dark:  ;
+    --text-color-light:  ;
+    --text-color-dark:  ;
+    --brand-color: rgb(239, 119, 33); 
+}
+
+#header{
+    /* border:  1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 2vh 4vw; */
+    padding: 2vh  4vw 2vh 8vw ;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #c8c5c5;
+
+}
+
+#brand-icon{
+    /* border:  1px solid red; */
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--brand-color);
+    letter-spacing: 1px;
+}
+
+.nav-items{
+    /* border:  1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    font-size: 1.4rem;
+    color: #4c4545;
+}
+
+.icon{
+    font-size: 1.2rem ;
+}
+
+.container{
+    /* border: 1px solid red; */
+    margin: 1vh 4vw;
+    position: relative;
+    top: 15vh;
+    text-align: center;
+    height: 500px;
+
+
+}
+.search-box{
+    border: 1px solid black;
+    border-radius: 50px;
+    border: 1px solid grey;
+
+    width: fit-content;
+    margin: auto;
+}
+.search-bar{
+    width: 30vw;
+    padding: 1.1rem 1.5rem;
+    /* border-radius: 50px; */
+    font-size: 1.5rem;
+    outline: none;;
+    border: none;
+    background: transparent;
+}
+.search-icon{
+    font-size: 2rem;
+    color:  grey;
+    margin-right: 1rem;
+    /* transition: 3sec ease; */
+}
+.search-icon:hover{
+    transform: scale(1.1);
+}
+
+.cards_container{
+    /* border: 1px solid cyan; */
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.card{
+    border: 2px solid var(--brand-color);
+    background-color: #fff;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 5vh;
+}
+#fav_btn{
+    /* border: 1px solid black; */
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-size: 1.5rem;
+}
+.meal_image{
+    width: 17vw;
+    height: 25vh;
+    border-radius: 50%;
+}
+.meal_name{
+    font-size: 1.6rem;
+    margin: 1rem
+}
+.readMore_btn{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: .3rem .5rem;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, orange, rgb(227, 80, 80));
+    /* color: white */
+    border: 1px solid transparent;
+}
