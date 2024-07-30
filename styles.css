@@ -98,6 +98,29 @@ body {
   transform: scale(1.1);
 }
 
+#results{
+  /* display: none; */
+  background-color: hsla(0, 0%, 90%, 0.986);
+   width: 35vw;
+   margin: auto;
+   text-align: left;
+   /* padding: 1% 3%; */
+   border-radius: 5px;
+  /* visibility: hidden; */
+}
+#results >ul>li{
+  border-bottom: 1px solid black;
+  padding: 3%;
+}
+/* #results > ul{
+  position: absolute;
+  text-decoration: none;
+} */
+.hide{
+  /* display: block; */
+  visibility: hidden;
+}
+
 .cards_container {
   /* border: 1px solid cyan; */
   margin-top: 5vh;
