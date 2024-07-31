@@ -1,5 +1,5 @@
 if (localStorage.getItem("wishlist") == null) {
-  localStorage.setItem("whislist", JSON.stringify([]));
+  localStorage.setItem("wislist", JSON.stringify([]));
 }
 
 const inputBox = document.getElementById("search-bar");
@@ -12,6 +12,23 @@ let searchText = "";
 //showMealList()
 inputBox.addEventListener("keyup", handleInput);
 searchIcon.addEventListener("click", handleSearch);
+
+function hdp(obj) {
+  console.log("handleDP called " + obj);
+  // let container = document.getElementById('meal-detail');
+  let container = document.getElementById("cards-container");
+  let details = ` 
+      <img id="meal-detail-img" src="${obj.strMealThumb}" alt="meal-image">
+        <div id="meal-txt">
+            <h1>${obj.strMeal}</h1>
+            <p>${obj.strInstructions}</p>
+            <a href="${obj.strYoutube}">watch video </a>
+        </div>
+  `;
+
+  container.innerHTML = details;
+}
+
 
 async function handleInput(e) {
   let meals = await getData(inputBox.value);
@@ -28,17 +45,28 @@ async function handleInput(e) {
       // }
       if (isFav) {
         cards += `
-        <p> wishlisted Item </p>
-      `;
-      } else {
-        cards += `
         <div class="card">
-                <i class="fa-regular fa-heart " id="fav_btn"></i>
                 <div >
                     <img class="meal_image" src="${obj.strMealThumb}" alt="meal-image">
                 </div>
                 <p class="meal_name">${obj.strMeal}</p>
-                <button class="readMore_btn">Read More</button>
+                <div id='content'>
+                <button id="read-more-btn" onclick="hdp()"><a href="meal_details.html">Read More</a></button>
+                <i class="fa-solid fa-heart " id="fav_btn"></i>
+                </div>
+        </div>
+      `;
+      } else {
+        cards += `
+        <div class="card">
+                <div >
+                    <img class="meal_image" src="${obj.strMealThumb}" alt="meal-image">
+                </div>
+                <p class="meal_name">${obj.strMeal}</p>
+                <div id='content'>
+                <button id="read-more-btn" onclick="handleDetailsPage(${obj.strMeal})">ṚM</button>
+                <i class="fa-regular fa-heart " id="fav_btn"></i>
+                </div>
         </div>
       `;
       }
@@ -67,6 +95,8 @@ async function getData(mealName) {
   }
   
 }
+
+
 
 
 
