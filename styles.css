@@ -8,7 +8,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f7f2f2;
   height: 100vh;
-  /* border-color: red; */
 }
 
 :root {
@@ -20,28 +19,19 @@ body {
 }
 
 #header {
-  /* border:  1px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 2vh 4vw; */
   padding: 2vh 6vw;
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  /* background-color: var(--bg-color-dark); */
-  /* background-color: rgba(255, 255, 255, 0.9); */
   background-color: hsl(0, 0%, 95%, 0.9);
-  /* opacity: 0.3; */
-   /* Add the blur effect */
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
 }
 
 #brand-icon {
-  /* border:  1px solid red; */
   font-size: 2.5rem;
   font-weight: bolder;
   color: var(--brand-color);
@@ -49,14 +39,13 @@ body {
 }
 
 .nav-items {
-  /* border:  1px solid blue; */
   display: flex;
-  justify-content: space-between;
-  width: 40vw;
+  justify-content: space-around;
+  width: 25vw;
   font-size: 1.4rem;
   color: var(--text-color-dark);
 }
-.nav-items:hover{
+.nav-items:hover {
   cursor: pointer;
 }
 
@@ -64,14 +53,14 @@ body {
   font-size: 1.2rem;
 }
 
+#wishlist-items {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 1px;
+}
+
 .container {
-  /* border: 1px solid red; */
-  margin: 20vh 3vw;
-  /* position: relative;
-    top: 15vh; */
-  /* margin-top: 20vh; */
-  text-align: center;
-  /* height: 500px; */
+  margin-top: 20vh;
 }
 .search-box {
   border: 1px solid black;
@@ -84,7 +73,6 @@ body {
 .search-bar {
   width: 30vw;
   padding: 1.1rem 1.5rem;
-  /* border-radius: 50px; */
   font-size: 1.5rem;
   outline: none;
   border: none;
@@ -95,24 +83,19 @@ body {
   font-size: 2rem;
   color: grey;
   margin-right: 1rem;
-  /* transition: 3sec ease; */
 }
 .search-icon:hover {
   transform: scale(1.1);
 }
 
-
 .cards_container {
-  /* border: 1px solid cyan; */
-  margin: 5vh 0 20vh;
+  margin-top: 5vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  height: fit-content;
 }
 
 .cards_container#fav {
-  /* border: 1px solid cyan; */
   margin: 15vh 0 10vh;
   display: flex;
   justify-content: center;
@@ -121,39 +104,40 @@ body {
 
 .card {
   border: 2px solid var(--brand-color);
-  background-color:  #f7f2f2;
+  background-color: #f7f2f2;
   position: relative;
   border-radius: 15px;
   margin: 5vh 1vw 0 1vw;
   box-shadow: 0px 0px 5px 3px var(--bg-color-light);
   text-align: center;
-  width: fit-content;
+  width: 18vw;
 }
 #fav_btn {
   font-size: 1.5rem;
-  transition:  0.5s ;
+  transition: 0.5s;
+  background: transparent;
+  border: none;
 }
-#fav_btn:hover{
+#fav_btn:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 .meal_image {
-  width: 20vw;
+  width: 100%;
   height: 30vh;
   border-radius: 15px 15px 0 0;
   background-position: center;
 }
 .meal_name {
-  /* border: 1px solid red; */
-  width: 100%;
+  width: 20vw;
   font-size: 1.4rem;
   font-weight: bold;
-  margin: 0.8rem auto ;
+  margin: 0.8rem auto;
   color: var(--text-color-dark);
   text-align: center;
 }
 
-#content{
+#content {
   display: flex;
   justify-content: space-between;
   margin: auto 5%;
@@ -163,13 +147,16 @@ body {
   font-size: 1.1rem;
   padding: 0.4rem 0.7rem;
   border-radius: 20px;
-  background-image: linear-gradient(90deg, rgb(248, 166, 13), rgb(231, 101, 101));
-  /* color: white */
+  background-image: linear-gradient(
+    90deg,
+    rgb(248, 166, 13),
+    rgb(231, 101, 101)
+  );
   border: 2px solid transparent;
   outline: none;
 }
-#read-more-btn:hover{
-  border: 2px solid var(--brand-color) ;
+#read-more-btn:hover {
+  border: 2px solid var(--brand-color);
   background-color: transparent;
   background-image: none;
   cursor: pointer;
@@ -180,59 +167,95 @@ a {
   text-decoration: none;
 }
 
-
-
-footer {
-  width: 100vw;
-  height: 8vh;
-  position: fixed;
-  bottom: 0px;
-  background-color: var(--bg-color-dark);
-  text-align: center;
-  padding-top: 3vh;
-  margin-top: 8vh;
+#meal-detail {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 90vw;
+  margin: 2vh auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+#first-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+#second-block {
+  align-items: center;
+}
+#video-btn {
+  background-color: var(--brand-color);
 }
 
-
-/* meal-detail-page */
-
-#meal-detail{
-    /* background-color: red; */
-    border: 1px solid black;
-    border-radius: 20px;
-    width: 90vw;
-    /* height: fit-content; */
-    margin: 15vh auto ;
-    /* margin-bottom: 15vh; */
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-
-    /* width: ; */
-
+#meal-detail-img {
+  margin: 0.5% 0;
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
 }
 
-#meal-detail-img{
-    margin: 1% 0;
-    height: 80%;
+#meal-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#meal-detail h1 {
+  font-size: 5rem;
+}
+
+#meal-detail p {
+  font-size: 1.3rem;
+  text-align: start;
+}
+
+/* media queries */
+
+@media screen and (max-width: 900px) {
+  .search-bar {
+    width: 50vw;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.2rem;
+  }
+  .search-icon {
+    font-size: 1.5rem;
+  }
+  .card {
+    width: 35vw;
+  }
+  .nav-items {
+    font-size: 1.1rem;
+    width: 30vw;
+  }
+
+  #meal-detail h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .nav-items {
+    font-size: 1rem;
     width: 40vw;
-    border-radius: 10px;
-}
+  }
 
-#meal-txt{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-}
+  .search-bar {
+    width: 60vw;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.2rem;
+  }
+  .search-icon {
+    font-size: 1.5rem;
+  }
+  .cards_container {
+    justify-content: center;
+  }
+  .card {
+    width: 65vw;
+  }
 
-#meal-txt h1{
+  #meal-detail h1 {
     font-size: 3rem;
-    margin: 1rem;
-}
-
-#meal-txt p{
-    font-size: 1.3rem;
-    margin: 1rem;
+  }
 }

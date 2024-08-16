@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>foodify</title>
+    <!-- link for fontawesome icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -12,103 +13,86 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="styles.css" />
-    <!-- <script type="text/javascript" src="index.js"></script> -->
-  </head>
-  <body>
+    <!-- link for bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
+    <!-- link for external stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
     <!-- Header Section  -->
     <header id="header">
       <h3 id="brand-icon">foodify</h3>
       <ul class="nav-items" type="none">
-        <li class="nav-item"> <i class="fa-solid fa-house icon"></i>Home </li>
-        <li class="nav-item" id="wishlist-btn"> <i class="fa-solid fa-heart icon"></i>Whishlist  </li>
-        <li class="nav-item"> <i class="fa-solid fa-phone icon"></i>Contact </li>
-        <li class="nav-item"> <i class="fa-solid fa-right-to-bracket icon"></i>Sign-up </li>
-        <li class="nav-item"> <i class="fa-solid fa-right-to-bracket icon"></i>Login</li>
-        
+        <li class="nav-item" id="home-btn">
+          <i class="fa-solid fa-house icon"></i>Home
+        </li>
+        <li class="nav-item" id="wishlist-btn">
+          <a
+            data-bs-toggle="offcanvas"
+            href="#wishlist"
+            role="button"
+            aria-controls="wishlist"
+            ><i class="fa-solid fa-heart"></i>Wishlist
+            <span id="wishlist-items"></span>
+          </a>
+        </li>
       </ul>
     </header>
 
     <!-- Homepage Section  -->
     <div class="container">
+      <div class="search-box">
+        <input
+          id="search-bar"
+          class="search-bar"
+          placeholder="Enter meal to search..."
+          type="text"
+          autocomplete="off"
+        />
+        <i
+          id="search-icon"
+          class="fa-solid fa-magnifying-glass icon search-icon"
+        ></i>
+      </div>
 
-            <div class="search-box">
-                <input id="search-bar" class="search-bar" placeholder="Enter your text here..." type="text" autocomplete="off"> </input>
-                <i id="search-icon" class="fa-solid fa-magnifying-glass icon search-icon"></i>
-                
-            </div>
-            <div id="results" class="hide"></div>
-        
-
-        <div class="cards_container" id="cards_container">
-            
-            <!--  <div class="card">
-               <div >
-                    <img class="meal_image" src="https://www.collinsdictionary.com/images/full/apple_158989157.jpg" alt="meal-image">
-                </div>
-                <p class="meal_name">Apple</p>
-                <div id="content">
-                  <button class="readMore_btn">Read More</button>
-                  <i class="fa-regular fa-heart " id="fav_btn"></i>
-                </div>
-            </div>
-
-            <div class="card">
-                <div >
-                    <img class="meal_image" src="https://www.collinsdictionary.com/images/full/apple_158989157.jpg" alt="meal-image">
-                </div>
-                <p class="meal_name">Apple</p> 
-                <div id="content">
-                  <button class="readMore_btn">Read More</button>
-                  <i class="fa-solid fa-heart " id="fav_btn"></i>
-                </div>
-            </div>
-            <div class="card">
-                <div >
-                    <img class="meal_image" src="https://www.collinsdictionary.com/images/full/apple_158989157.jpg" alt="meal-image">
-                </div>
-                <p class="meal_name">Apple</p> 
-                <div id="content">
-                  <button class="readMore_btn">Read More</button>
-                  <i class="fa-solid fa-heart " id="fav_btn"></i>
-                </div>
-            </div>
-            <div class="card">
-                <div >
-                    <img class="meal_image" src="https://www.collinsdictionary.com/images/full/apple_158989157.jpg" alt="meal-image">
-                </div>
-                <p class="meal_name">Apple</p> 
-                <div id="content">
-                  <button class="readMore_btn">Read More</button>
-                  <i class="fa-solid fa-heart " id="fav_btn"></i>
-                </div>
-            </div>
-            <div class="card">
-                <div >
-                    <img class="meal_image" src="https://www.collinsdictionary.com/images/full/apple_158989157.jpg" alt="meal-image">
-                </div>
-                <p class="meal_name">Apple</p> 
-                <div id="content">
-                  <button class="readMore_btn">Read More</button>
-                  <i class="fa-solid fa-heart " id="fav_btn"></i>
-                </div>
-            </div> -->
-
-        </div>
-
-
+      <div class="cards_container" id="cards_container"></div>
     </div>
 
+    <!-- sidebar section -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="wishlist"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header bg-warning">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Wishlist</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex justify-content-center">
+        <div id="bt-fav"></div>
+      </div>
+    </div>
 
-
-    <!-- Footer Section  -->
-     <!-- <footer>
-        <p>@ copyright 2024</p>
-     </footer> -->
-
-    <script type="module" src="index.js"></script>
+    <!-- link for bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link for  external js file -->
+    <script src="index.js"></script>
   </body>
 </html>
-
-
