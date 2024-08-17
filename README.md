@@ -4,9 +4,9 @@
 
 <p>This webpage allow  users to search their meals by entering the name in search input box. It also shows the suggestions while typing 
   the meal name. 
-  The page also offers functionality to wishlist their favourite meals. Users can find all their favourite meals in the 
+  The page offers functionality to wishlist their favourite meals. Users can find all their favourite meals in the 
   wishlist bag.
-  If want to read further about the cooking instruction, one can click on Read More button, and further details about the meals are displayed.
+  If want to read further about the cooking instruction, one can click on Read More button, and details of the meals are displayed.
 </p>
 <hr>
 <h3>Tech stack used:</h3>
