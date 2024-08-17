@@ -91,7 +91,7 @@ body {
 .cards_container {
   margin-top: 5vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -129,7 +129,7 @@ body {
   background-position: center;
 }
 .meal_name {
-  width: 20vw;
+  width: 90%;
   font-size: 1.4rem;
   font-weight: bold;
   margin: 0.8rem auto;
